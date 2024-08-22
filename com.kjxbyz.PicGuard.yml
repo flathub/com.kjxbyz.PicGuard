@@ -33,43 +33,47 @@ modules:
       - type: file
         only-arches:
           - x86_64
-        url: https://github.com/picguard/picguard/releases/download/v1.0.0+392/picguard_1.0.0+392_linux_amd64.deb
+        url: https://github.com/picguard/picguard/releases/download/v1.0.0%2B398/picguard_1.0.0%2B398_linux_amd64.deb
         dest-filename: picguard.deb
-        sha256: 219553cb5696afed1f97b6b309760755fa1b14479303bcae9e96edc86ac3c0f2
+        sha256: 94f51bc12b8869baea1da05400804d9054544a6fc64a1ecb8c3be47888b0be9c
         x-checker-data:
           type: json
           url: https://api.github.com/repos/picguard/picguard/releases/latest
           version-query: .tag_name | sub("v";"")
-          url-query: .assets[] | select(.name=="picguard_" + $version + "_linux_amd64.deb") | .browser_download_url
+          url-query: .assets[] | select(.name=="picguard_" + $version + "_linux_amd64.deb")
+            | .browser_download_url
 
       - type: file
         only-arches:
           - aarch64
-        url: https://github.com/picguard/picguard/releases/download/v1.0.0+392/picguard_1.0.0+392_linux_aarch64.deb
+        url: https://github.com/picguard/picguard/releases/download/v1.0.0%2B398/picguard_1.0.0%2B398_linux_aarch64.deb
         dest-filename: picguard.deb
-        sha256: 5868ad437f66950bf64a32371f8570e46e6af0f35c22eda08143cd826be8b259
+        sha256: 4e6622caae4a33039d1bc66505a0f38637b252e50ebd6e72e11607e757498146
         x-checker-data:
           type: json
           url: https://api.github.com/repos/picguard/picguard/releases/latest
           version-query: .tag_name | sub("v";"")
-          url-query: .assets[] | select(.name=="picguard_" + $version + "_linux_aarch64.deb") | .browser_download_url
+          url-query: .assets[] | select(.name=="picguard_" + $version + "_linux_aarch64.deb")
+            | .browser_download_url
 
       - type: file
-        url: https://raw.githubusercontent.com/picguard/picguard/v1.0.0+392/linux/shared/com.kjxbyz.PicGuard.desktop
+        url: https://raw.githubusercontent.com/picguard/picguard/v1.0.0+398/linux/shared/com.kjxbyz.PicGuard.desktop
         dest-filename: com.kjxbyz.PicGuard.desktop
         sha256: 8e13c1b75103f39a3f57f72c36537e18e01cfdaf50ba888c5524717cc3fefd12
         x-checker-data:
           type: json
           url: https://api.github.com/repos/picguard/picguard/releases/latest
           version-query: .tag_name
-          url-query: '"https://raw.githubusercontent.com/picguard/picguard/" + $version + "/linux/shared/com.kjxbyz.PicGuard.desktop"'
+          url-query: '"https://raw.githubusercontent.com/picguard/picguard/" + $version
+            + "/linux/shared/com.kjxbyz.PicGuard.desktop"'
 
       - type: file
-        url: https://raw.githubusercontent.com/picguard/picguard/v1.0.0+392/linux/shared/com.kjxbyz.PicGuard.appdata.xml
+        url: https://raw.githubusercontent.com/picguard/picguard/v1.0.0+398/linux/shared/com.kjxbyz.PicGuard.appdata.xml
         dest-filename: com.kjxbyz.PicGuard.appdata.xml
-        sha256: f9b37ce592a9942c28b73ad2b2e68df0cb190e9817b69cb587e5f9b158506992
+        sha256: 235639b06f75de2c7640f084a13509e51d1ee2d912e9bb5f6cf930bef4cd9873
         x-checker-data:
           type: json
           url: https://api.github.com/repos/picguard/picguard/releases/latest
           version-query: .tag_name
-          url-query: '"https://raw.githubusercontent.com/picguard/picguard/" + $version + "/linux/shared/com.kjxbyz.PicGuard.appdata.xml"'
+          url-query: '"https://raw.githubusercontent.com/picguard/picguard/" + $version
+            + "/linux/shared/com.kjxbyz.PicGuard.appdata.xml"'
