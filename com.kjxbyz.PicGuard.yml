@@ -26,7 +26,8 @@ modules:
       - install -Dm755 usr/share/picguard/picguard /app/bin/picguard
       - cp -r usr/share/picguard/data usr/share/picguard/lib /app/bin/
 
-      - desktop-file-edit --remove-key=Version --set-key=Terminal --set-value='false' --set-icon='com.kjxbyz.PicGuard' "usr/share/applications/picguard.desktop"
+      - desktop-file-edit --remove-key=Version --set-key=Terminal --set-value='false'
+        --set-icon='com.kjxbyz.PicGuard' "usr/share/applications/picguard.desktop"
       - install -Dm644 usr/share/applications/picguard.desktop /app/share/applications/com.kjxbyz.PicGuard.desktop
 
       - install -Dm644 usr/share/icons/hicolor/128x128/apps/picguard.png /app/share/icons/hicolor/128x128/apps/com.kjxbyz.PicGuard.png
@@ -37,9 +38,9 @@ modules:
       - type: file
         only-arches:
           - x86_64
-        url: https://github.com/picguard/picguard/releases/download/v1.0.2%2B409/picguard_1.0.2%2B409_linux_amd64.deb
+        url: https://github.com/picguard/picguard/releases/download/v1.0.2%2B410/picguard_1.0.2%2B410_linux_amd64.deb
         dest-filename: picguard.deb
-        sha256: 08ae99db812012a8e08d401e3afb43f1782c239f3b3e1431b216d9401c7d80b5
+        sha256: 2b4bd23696b41df9cdcc5b493a3346f0edf88121a50cd701743c2341deb4b3db
         x-checker-data:
           type: json
           url: https://api.github.com/repos/picguard/picguard/releases/latest
@@ -50,9 +51,9 @@ modules:
       - type: file
         only-arches:
           - aarch64
-        url: https://github.com/picguard/picguard/releases/download/v1.0.2%2B409/picguard_1.0.2%2B409_linux_aarch64.deb
+        url: https://github.com/picguard/picguard/releases/download/v1.0.2%2B410/picguard_1.0.2%2B410_linux_aarch64.deb
         dest-filename: picguard.deb
-        sha256: 5c49ce80d40d3fa1e842b04a580228d28c9fa0a94e72b4baf7d59808ab3c50d5
+        sha256: 39ceb31e17a2570904f3c6775fbe07edbac7313348ed84ce54a314277b62edc6
         x-checker-data:
           type: json
           url: https://api.github.com/repos/picguard/picguard/releases/latest
