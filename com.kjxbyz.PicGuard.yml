@@ -38,9 +38,9 @@ modules:
       - type: file
         only-arches:
           - x86_64
-        url: https://github.com/picguard/picguard/releases/download/v1.0.4%2B419/picguard_1.0.4%2B419_linux_amd64.deb
+        url: https://github.com/picguard/picguard/releases/download/v1.0.4%2B420/picguard_1.0.4%2B420_linux_amd64.deb
         dest-filename: picguard.deb
-        sha256: 32991a01fffbb5f6efad3851f22439932e11a2b4870536333b05ee39a32b78b3
+        sha256: b2c1f305a30cfe078fd1ab7e3e05d84c08cd50fc26054e0a8ceb052af8f6cb7f
         x-checker-data:
           type: json
           url: https://api.github.com/repos/picguard/picguard/releases/latest
@@ -51,9 +51,9 @@ modules:
       - type: file
         only-arches:
           - aarch64
-        url: https://github.com/picguard/picguard/releases/download/v1.0.4%2B419/picguard_1.0.4%2B419_linux_aarch64.deb
+        url: https://github.com/picguard/picguard/releases/download/v1.0.4%2B420/picguard_1.0.4%2B420_linux_aarch64.deb
         dest-filename: picguard.deb
-        sha256: 40e58c7fd218ad47216400e9cef3dae3810c9fee1eb0e24293ecdbb05a8425d4
+        sha256: 5bfd0a12a650a075a1ae9785f940be29e86615548bf6e298bfc179eaf64d68dc
         x-checker-data:
           type: json
           url: https://api.github.com/repos/picguard/picguard/releases/latest
