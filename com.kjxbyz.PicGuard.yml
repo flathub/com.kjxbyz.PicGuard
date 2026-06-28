@@ -24,8 +24,8 @@ modules:
     buildsystem: simple
     build-commands:
       - bsdtar -Oxf picguard.deb data.tar.zst | bsdtar -xf -
-      - install -Dm755 usr/share/picguard/picguard /app/bin/picguard
-      - cp -r usr/share/picguard/data usr/share/picguard/lib /app/bin/
+      - install -Dm755 opt/picguard/picguard /app/bin/picguard
+      - cp -r opt/picguard/data opt/picguard/lib /app/bin/
 
       - desktop-file-edit --remove-key=Version --set-key=Terminal --set-value='false'
         --set-icon='com.kjxbyz.PicGuard' "usr/share/applications/picguard.desktop"
